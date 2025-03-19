@@ -1,20 +1,11 @@
 {
-    "id": "com.tcg.image-zoom",
-    "name": "TCG Image Zoom",
-    "description": "This plugin adds functionality for image zooming.",
-    "homepage_url": "https://github.com/mattermost/mattermost-plugin-starter-template",
-    "support_url": "https://github.com/mattermost/mattermost-plugin-starter-template/issues",
-    "icon_path": "assets/starter-template-icon.svg",
+    "id": "com.karoid.image-preview-zoom",
+    "name": "Image Preview Zoom",
+    "description": "This plugin adds functionality for image preview zooming.",
+    "homepage_url": "https://github.com/Karoid/mattermost-plugin-image-preview-zoom",
+    "support_url": "https://github.com/Karoid/mattermost-plugin-image-preview-zoom/issues",
+    "icon_path": "assets/image-preview-zoom.svg",
     "min_server_version": "6.2.1",
-    "server": {
-        "executables": {
-            "linux-amd64": "server/dist/plugin-linux-amd64",
-            "linux-arm64": "server/dist/plugin-linux-arm64",
-            "darwin-amd64": "server/dist/plugin-darwin-amd64",
-            "darwin-arm64": "server/dist/plugin-darwin-arm64",
-            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
-        }
-    },
     "webapp": {
         "bundle_path": "webapp/dist/main.js"
     },

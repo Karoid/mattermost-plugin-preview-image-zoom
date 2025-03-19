@@ -3,6 +3,8 @@ dist/
 webapp/src/manifest.ts
 server/manifest.go
 
+node_modules/*
+
 # Mac
 .DS_Store
 
