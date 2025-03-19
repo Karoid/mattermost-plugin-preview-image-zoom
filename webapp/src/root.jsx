@@ -24,13 +24,17 @@ function Root() {
         previewUrl = fileInfo.has_preview_image ? getFilePreviewUrl(fileInfo.id) : fileUrl;
     }
 
-    // if (!canDownloadFiles) {
-    //     return <img src={previewUrl}/>;
-    // }
-
     return (
         <div className='image_preview__container'>
-            <TransformWrapper>
+            <TransformWrapper
+                onZoom={() => {
+                    const imgElement = document.querySelector('.image_preview__image');
+                    imgElement.classList.add('image_preview__image--zoomed');
+                    if (imgElement.src !== fileUrl) {
+                        imgElement.src = fileUrl;
+                    }
+                }}
+            >
                 {({zoomIn, zoomOut, resetTransform}) => (
                     <>
                         <div className='image_preview_zoom_actions__actions'>
