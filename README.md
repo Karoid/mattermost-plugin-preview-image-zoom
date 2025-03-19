@@ -1,50 +1,23 @@
-# Plugin Starter Template [![CircleCI branch](https://img.shields.io/circleci/project/github/mattermost/mattermost-plugin-starter-template/master.svg)](https://circleci.com/gh/mattermost/mattermost-plugin-starter-template)
+# Image Preview Zoom Plugin
 
-This plugin serves as a starting point for writing a Mattermost plugin. Feel free to base your own plugin off this repository.
+이 플러그인은 Mattermost의 이미지 미리보기에 확대/축소 기능을 추가합니다.
 
-To learn more about plugins, see [our plugin documentation](https://developers.mattermost.com/extend/plugins/).
+## 소개
 
-This template requires node v16 and npm v8. You can download and install nvm to manage your node versions by following the instructions [here](https://github.com/nvm-sh/nvm). Once you've setup the project simply run `nvm i` within the root folder to use the suggested version of node.
+Image Preview Zoom 플러그인은 Mattermost에서 이미지를 볼 때 확대/축소 기능을 제공합니다. 
 
-## Getting Started
-Use GitHub's template feature to make a copy of this repository by clicking the "Use this template" button.
+## 설치 요구사항
 
-Alternatively shallow clone the repository matching your plugin name:
-```
-git clone --depth 1 https://github.com/mattermost/mattermost-plugin-starter-template com.example.my-plugin
-```
+- Mattermost Server v6.2.1 이상
 
-Note that this project uses [Go modules](https://github.com/golang/go/wiki/Modules). Be sure to locate the project outside of `$GOPATH`.
+## 개발하기
 
-Edit the following files:
-1. `plugin.json` with your `id`, `name`, and `description`:
-```json
-{
-    "id": "com.example.my-plugin",
-    "name": "My Plugin",
-    "description": "A plugin to enhance Mattermost."
-}
-```
-
-2. `go.mod` with your Go module path, following the `<hosting-site>/<repository>/<module>` convention:
-```
-module github.com/example/my-plugin
-```
-
-3. `.golangci.yml` with your Go module path:
-```yml
-linters-settings:
-  # [...]
-  goimports:
-    local-prefixes: github.com/example/my-plugin
-```
-
-Build your plugin:
-```
+플러그인을 빌드하려면:
+```bash
 make
 ```
 
-This will produce a single plugin file (with support for multiple architectures) for upload to your Mattermost server:
+이 명령어는 Mattermost 서버에 업로드할 수 있는 단일 플러그인 파일을 생성합니다:
 
 ```
 dist/com.example.my-plugin.tar.gz
