@@ -27,6 +27,12 @@ function Root() {
     return (
         <div className='image_preview__container'>
             <TransformWrapper
+                onInit={({zoomOut}) => {
+                    // 컴포넌트 초기화 시 zoomOut 실행하여 가운데 정렬
+                    setTimeout(() => {
+                        zoomOut();
+                    }, 100);
+                }}
                 onZoom={() => {
                     const imgElement = document.querySelector('.image_preview__image');
                     imgElement.classList.add('image_preview__image--zoomed');
